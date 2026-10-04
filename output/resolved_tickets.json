@@ -1,0 +1,88 @@
+{
+  "run_date": "2026-10-04",
+  "shop_today": "2026-08-31",
+  "starting_checking_balance": 3400.0,
+  "ending_checking_balance": 160.0,
+  "tickets": [
+    {
+      "ticket_id": 101,
+      "type": "customer_order",
+      "outcome": "CC-TEE-WHITE size S was out of stock (0 on hand) and Bulldog Print Co was blocked by overdue invoice 501. After a human approved paying the $840 invoice, Bulldog could ship, so Inventory drafted PO-005 (1 tee, $8, arriving 2026-09-05) and Customer Service drafted a reply to Tauhid Zaman (MSG-006, not sent). The PO was approved by a human and the ticket was marked resolved.",
+      "board_runs": 3,
+      "agents_contributed": [
+        "boss",
+        "inventory",
+        "accounting",
+        "customer_service"
+      ],
+      "agents_not_called": [
+        "facilities"
+      ],
+      "human_approvals_required": true,
+      "human_approvals": [
+        {
+          "id": "APR-001",
+          "what": "Pay invoice 501 to Bulldog Print Co",
+          "amount": 840.0,
+          "approved_by": "Casey Brengman",
+          "result": "paid (payment #1)"
+        },
+        {
+          "id": "PO-005",
+          "what": "Purchase order: 1 CC-TEE-WHITE S from Bulldog Print Co",
+          "amount": 8.0,
+          "approved_by": "Casey Brengman",
+          "result": "approved draft, not sent, no cash moved"
+        }
+      ],
+      "cash_change": -840.0,
+      "resolved_by": "Casey Brengman (dashboard Mark resolved)"
+    },
+    {
+      "ticket_id": 102,
+      "type": "rent_notice",
+      "outcome": "Facilities confirmed the landlord notice matches lease 1 ($2,400 due 2026-09-02). Accounting requested approval; a human approved it and rent was paid on time, moving the lease's next due date to 2026-10-02. A landlord acknowledgment draft (MSG-002) was also saved, not sent.",
+      "board_runs": 1,
+      "agents_contributed": [
+        "boss",
+        "facilities",
+        "accounting",
+        "customer_service"
+      ],
+      "agents_not_called": [
+        "inventory"
+      ],
+      "human_approvals_required": true,
+      "human_approvals": [
+        {
+          "id": "APR-002",
+          "what": "Pay lease 1 rent to Elm City Properties",
+          "amount": 2400.0,
+          "approved_by": "Casey Brengman",
+          "result": "paid (payment #2)"
+        }
+      ],
+      "cash_change": -2400.0,
+      "resolved_by": "Casey Brengman (dashboard Mark resolved)"
+    },
+    {
+      "ticket_id": 103,
+      "type": "price_override",
+      "outcome": "Only 8 of the 20 requested CC-HOOD-NAVY size M hoodies are in stock (short 12). Accounting confirmed the $22 cost floor and the Boss approved a bulk price of $52.00 each (about 10% off list $58). Customer Service drafted the offer to Yale AI Club (MSG-003, not sent). The Boss resolved the ticket.",
+      "board_runs": 1,
+      "agents_contributed": [
+        "boss",
+        "inventory",
+        "accounting",
+        "customer_service"
+      ],
+      "agents_not_called": [
+        "facilities"
+      ],
+      "human_approvals_required": false,
+      "human_approvals": [],
+      "cash_change": 0.0,
+      "resolved_by": "Boss agent (update_ticket -> resolved)"
+    }
+  ]
+}

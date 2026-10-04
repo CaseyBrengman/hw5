@@ -1,0 +1,19 @@
+# secrets
+.env
+.env.local
+.env.*.local
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# node
+node_modules/
+frontend/dist/
+
+# local tooling and source zip
+.claude/
+*.zip
+*.tmp_rename

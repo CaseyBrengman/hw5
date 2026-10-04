@@ -1,0 +1,76 @@
+[
+  {
+    "draft_id": "MSG-001",
+    "kind": "customer_message",
+    "status": "draft - NOT sent",
+    "ticket_id": 101,
+    "to": "Tauhid Zaman",
+    "subject": "Update on your Bulldog tee",
+    "body": "Hi Tauhid,\n\nThe CC-TEE-WHITE Bulldog tee in size S is currently out of stock. We\u2019re working to confirm the next restock: Bulldog Print Co. estimates five days after the order is placed and the related invoice is paid, but we can\u2019t promise an arrival date yet. We\u2019ll update you as soon as the payment approval and restock timing are confirmed.\n\nThank you for your patience,\nCampus Customs",
+    "drafted_by": "customer_service",
+    "created_at": "2026-10-04T15:17:14-04:00"
+  },
+  {
+    "draft_id": "MSG-002",
+    "kind": "customer_message",
+    "status": "draft - NOT sent",
+    "ticket_id": 102,
+    "to": "Elm City Properties",
+    "subject": "Re: Rent due",
+    "body": "Dear Elm City Properties,\n\nThank you for the rent notice. We acknowledge that the $2,400.00 rent for lease 1 is due on September 2, 2026. Payment is currently pending human approval, so it has not yet been paid. We will provide an update once the approval process is complete.\n\nBest regards,\nCampus Customs",
+    "drafted_by": "customer_service",
+    "created_at": "2026-10-04T15:17:46-04:00"
+  },
+  {
+    "draft_id": "MSG-003",
+    "kind": "customer_message",
+    "status": "draft - NOT sent",
+    "ticket_id": 103,
+    "to": "Yale AI Club",
+    "subject": "Bulk hoodie request \u2014 current availability",
+    "body": "Hello Yale AI Club,\n\nThe approved bulk price is $52.00 per CC-HOOD-NAVY size M hoodie. Of the 20 hoodies requested, 8 are currently in stock, leaving 12 unavailable at this time. We\u2019re unable to promise an arrival date or shipment for the remaining 12, but we can confirm the current availability above.\n\nBest,\nCampus Customs",
+    "drafted_by": "customer_service",
+    "created_at": "2026-10-04T15:18:20-04:00"
+  },
+  {
+    "draft_id": "MSG-004",
+    "kind": "customer_message",
+    "status": "draft - NOT sent",
+    "ticket_id": 101,
+    "to": "Tauhid Zaman",
+    "subject": "Update on your Bulldog tee",
+    "body": "Hi Tauhid,\n\nYour requested CC-TEE-WHITE Bulldog tee in size S is currently out of stock. Bulldog Print Co. can supply it with a five-day lead time after an order is placed, with the earliest possible arrival on September 5, 2026. We have not yet confirmed order placement or shipment, so we cannot promise that arrival date at this time. Invoice 501 has been paid and is not preventing shipment. We\u2019ll share a further update once the order and shipment are confirmed.\n\nBest,\nCampus Customs",
+    "drafted_by": "customer_service",
+    "created_at": "2026-10-04T15:19:48-04:00"
+  },
+  {
+    "draft_id": "PO-005",
+    "kind": "purchase_order",
+    "status": "approved by human - ready to order, NOT sent",
+    "ticket_id": 101,
+    "vendor_id": 1,
+    "vendor_name": "Bulldog Print Co",
+    "sku": "CC-TEE-WHITE",
+    "product_name": "Classic Bulldog Tee",
+    "size": "S",
+    "qty": 1,
+    "unit_cost": 8.0,
+    "total_cost": 8.0,
+    "expected_arrival": "2026-09-05",
+    "drafted_by": "inventory",
+    "created_at": "2026-10-04T15:30:35-04:00",
+    "decided_by": "Casey Brengman",
+    "decided_at": "2026-10-04T15:31:13-04:00"
+  },
+  {
+    "draft_id": "MSG-006",
+    "kind": "customer_message",
+    "status": "draft - NOT sent",
+    "ticket_id": 101,
+    "to": "Tauhid Zaman",
+    "subject": "Update on your Bulldog tee",
+    "body": "Hi Tauhid,\n\nThe CC-TEE-WHITE Bulldog tee in size S is currently out of stock. We have a local restock order pending confirmation; the vendor can ship, and September 5, 2026 is the earliest possible arrival if the order is placed today. We cannot promise shipment or arrival yet, but we\u2019ll confirm the order status and timing as soon as it\u2019s approved.\n\nThank you for your patience\u2014and Go Bulldogs!\n\nBest,\nCampus Customs",
+    "drafted_by": "customer_service",
+    "created_at": "2026-10-04T15:30:45-04:00"
+  }
+]

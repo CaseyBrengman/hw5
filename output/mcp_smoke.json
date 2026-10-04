@@ -1,0 +1,108 @@
+{
+  "problem": "Problem 4 - Add the MCP Server to Vibe Coder and Test Each Tool",
+  "vibe_coder": "Claude Code (desktop app, Code tab)",
+  "mcp_config": ".mcp.json (server: campus-customs -> mcp_server/server.py)",
+  "database": "data/campus_customs_new.db",
+  "tested_at": "2026-10-04T14:22:06-04:00",
+  "tests": [
+    {
+      "tool": "check_stock_and_price",
+      "prompt": "Can we fill Ticket 103: 20 navy hoodies (CC-HOOD-NAVY) in size M?",
+      "arguments": {
+        "sku": "CC-HOOD-NAVY",
+        "size": "M",
+        "qty_requested": 20
+      },
+      "tool_output": {
+        "found": true,
+        "sku": "CC-HOOD-NAVY",
+        "name": "Basic Hoodie Big Yale",
+        "size": "M",
+        "location": "Aisle A",
+        "qty_on_hand": 8,
+        "qty_requested": 20,
+        "can_fill_from_stock": false,
+        "shortfall": 12,
+        "unit_cost": 22,
+        "list_price": 58,
+        "margin_per_unit": 36,
+        "list_total_for_request": 1160,
+        "floor_price_per_unit": 22
+      },
+      "db_check": {
+        "inventory.qty": 8,
+        "inventory.location": "Aisle A",
+        "pricing.unit_cost": 22.0,
+        "pricing.list_price": 58.0,
+        "matches": true
+      }
+    },
+    {
+      "tool": "check_vendor_status",
+      "prompt": "Can Bulldog Print Co (vendor 1) ship the reprint for Ticket 101?",
+      "arguments": {
+        "vendor_id": 1
+      },
+      "tool_output": {
+        "found": true,
+        "vendor_id": 1,
+        "name": "Bulldog Print Co",
+        "specialty": "apparel reprint",
+        "lead_days": 5,
+        "shop_today": "2026-08-31",
+        "can_ship": false,
+        "blocked_reason": "Vendor has unpaid open invoice(s); pay them before ordering.",
+        "open_invoices": [
+          {
+            "invoice_id": 501,
+            "amount": 840,
+            "due_date": "2026-08-28",
+            "description": "Rush reprint CC-TEE-WHITE S",
+            "overdue": true,
+            "days_past_due": 3
+          }
+        ],
+        "amount_owed": 840,
+        "arrival_if_ordered_today": null
+      },
+      "db_check": {
+        "vendors": {
+          "name": "Bulldog Print Co",
+          "specialty": "apparel reprint",
+          "lead_days": 5
+        },
+        "desk.date_today": "2026-08-31",
+        "open_invoices": [
+          {
+            "id": 501,
+            "amount": 840.0,
+            "due_date": "2026-08-28",
+            "status": "open",
+            "description": "Rush reprint CC-TEE-WHITE S"
+          }
+        ],
+        "matches": true
+      }
+    },
+    {
+      "tool": "pay_bill",
+      "prompt": "Try to pay invoice 501 for Bulldog Print Co without any human approval. (Option A refusal test: approved by Casey as a safe test, no real payment.)",
+      "arguments": {
+        "kind": "invoice",
+        "ref_id": 501,
+        "approved_by": ""
+      },
+      "tool_output": {
+        "paid": false,
+        "error": "Refused: no human approval. Ask a human first and pass their name as approved_by."
+      },
+      "db_check": {
+        "cash_accounts.checking.balance": 3400.0,
+        "payments.row_count": 0,
+        "invoices.501.status": "open",
+        "matches": true,
+        "note": "Refusal confirmed: no money moved, no payment row written, invoice still open."
+      }
+    }
+  ]
+}

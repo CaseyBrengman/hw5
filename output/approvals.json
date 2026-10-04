@@ -1,0 +1,30 @@
+[
+  {
+    "approval_id": "APR-001",
+    "kind": "invoice",
+    "ref_id": 501,
+    "ticket_id": 101,
+    "amount": 840.0,
+    "reason": "Request human approval to pay overdue invoice 501; checking cash is sufficient and payment will not make cash negative.",
+    "requested_by": "accounting",
+    "requested_at": "2026-10-04T15:17:05-04:00",
+    "status": "paid",
+    "decided_by": "Casey Brengman",
+    "decided_at": "2026-10-04T15:19:16-04:00",
+    "payment_id": 1
+  },
+  {
+    "approval_id": "APR-002",
+    "kind": "rent",
+    "ref_id": 1,
+    "ticket_id": 102,
+    "amount": 2400.0,
+    "reason": "Lease 1 rent of $2,400.00 is due 2026-09-02; checking cash is sufficient and payment avoids negative cash, leaving $1,000.00 before the open vendor invoice.",
+    "requested_by": "accounting",
+    "requested_at": "2026-10-04T15:17:37-04:00",
+    "status": "paid",
+    "decided_by": "Casey Brengman",
+    "decided_at": "2026-10-04T15:19:18-04:00",
+    "payment_id": 2
+  }
+]
